@@ -16,14 +16,13 @@ export class CoursesComponent {
 
   courses$: Observable<Course[]>;
   displayedColumns = ['name','categoria'];
-  dialog: any;
 
 constructor(
   private coursesService: CoursesService,
-  dialog: MatDialog) {
+  private dialog: MatDialog) {
     this.courses$ = this.coursesService.list().pipe(
       catchError(error => {
-        this.onError("Erro ao carregar");
+        this.onError('Erro ao carregar.');
         return of([])
       })
     );
