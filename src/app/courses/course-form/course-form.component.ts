@@ -17,4 +17,12 @@ export class CourseFormComponent {
     });
   }
 
+  onSubmit(){
+
+  }
+
+  onCancel(){
+
+  }
+
 }
